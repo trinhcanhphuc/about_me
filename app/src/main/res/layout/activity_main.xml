@@ -4,22 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/layout_margin"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/font"
+        style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/name"
-        android:textAlignment="center"
-        style="@style/NameStyle" />
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/editText"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/name"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:text="@string/done" />
 
     <ImageView
         android:id="@+id/star_image"
-        android:contentDescription="@string/yellow_star"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/yellow_star"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <ScrollView
@@ -29,11 +51,11 @@
 
         <TextView
             android:id="@+id/bio_text"
+            style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingMultiplier="1.2"
-            android:text="@string/bio"
-            style="@style/NameStyle" />
+            android:text="@string/bio" />
     </ScrollView>
 
 </LinearLayout>
